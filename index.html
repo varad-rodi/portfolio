@@ -179,8 +179,18 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+            
             gap: 20px;
             top: 20px;
+        }
+
+
+        .section2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .task {
@@ -188,16 +198,21 @@
             gap: 20px;
             justify-content: center;
             position: relative;
-            top: -100px;
+            top: -30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
 
         }
 
         .tools {
             position: relative;
-            top: -100px;
+            top: -40px;
             text-align: center;
             padding-bottom: 27px;
             color: #0fe;
+
 
         }
 
@@ -209,7 +224,6 @@
             backdrop-filter: blur(10px);
             border: 2px solid white;
             border-radius: 70px;
-            transition: .5s;
 
         }
 
@@ -218,7 +232,7 @@
             box-shadow: 0 0 20px pink;
         }
 
-        /*services*/
+        /*services */
 
         .services {
             display: grid;
@@ -228,6 +242,9 @@
             gap: 210px 30px;
             justify-content: center;
             align-content: center;
+            gap: 110px 110px;
+            position: relative;
+            bottom: 7rem;
 
         }
 
@@ -239,8 +256,8 @@
             backdrop-filter: blur(10px);
             background-color: rgba(35, 28, 107, 0.296);
             border-radius: 20px;
-            height: 250px;
-            width: 400px;
+            height: 14rem;
+            width: 20rem;
 
         }
 
@@ -288,7 +305,7 @@
         }
 
         .services .right {
-            transform: translateX(310px);
+
             animation: services2 3s ease-in-out 0s 1 forwards;
         }
 
@@ -303,7 +320,7 @@
             }
 
             to {
-                transform: translateX(-210px);
+                transform: translateX(0);
             }
         }
 
@@ -313,7 +330,7 @@
             }
 
             to {
-                transform: translateX(20px);
+                transform: translateX(0);
             }
         }
 
@@ -322,11 +339,12 @@
         .contact {
             height: 100vh;
             width: 100vw;
-            /*  background-color: rgb(7, 48, 60);*/
             color: rgb(255, 255, 255);
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            bottom: 110px;
 
         }
 
@@ -334,8 +352,8 @@
 
             background-color: rgba(148, 177, 170, 0.438);
             border: 2px solid pink;
-            width: 25vw;
-            height: 60vh;
+            width: 35vw;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -381,8 +399,6 @@
             width: 40%;
             height: 2rem;
             border-radius: 20px;
-
-            animation: scale 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
         }
 
         form button:hover {
@@ -399,6 +415,7 @@
             width: 70%;
             resize: none;
         }
+
 
         .menu-btn {
             display: none;
@@ -417,12 +434,7 @@
         }
 
 
-        @media(max-width:830px) {
-
-            nav button {
-                display: none;
-            }
-
+        @media(max-width:804px){
             .menu-btn {
                 display: block;
             }
@@ -444,12 +456,7 @@
                 visibility: hidden;
                 pointer-events: none;
                 transition: 0.4s;
-            }
 
-            .menu.nav-open {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: auto;
             }
 
             .navback {
@@ -457,166 +464,129 @@
                 backdrop-filter: blur(10px);
             }
 
-            .menu-items {
-                font-size: 1.2rem;
-            }
-
-
-            nav {
-                height: 60px;
-            }
-
-            ul {
-                gap: 2px;
-                font-size: 0.7rem;
-            }
-
-            .home {
-                flex-direction: column;
-                margin-top: 7rem;
+            .nav-open {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
             }
 
             nav button {
-                height: 20px;
-                width: 70px;
-                font-size: small;
+                display: none;
             }
 
-            .home .right {
-                text-align: center;
+            nav a:hover {
+                background-color: rgba(255, 255, 255, 0.541);
+            }
+
+            .home {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                position: relative;
+                top: 60px;
+                margin-bottom: 110px;
+            }
+
+            .home .left {
+                height: 200px;
+                width: 200px;
             }
 
             .home h1 {
-                font-size: 2rem;
+                text-align: center;
+            }
+
+            .home p {
+                text-align: justify;
+            }
+
+          
+
+            .task {
+                top: 20px;
+                position: relative;
+                gap: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
             }
 
             .tools {
-                margin-top: 10rem;
+                position: relative;
+                top: 30px;
+                text-align: center;
+                padding-bottom: 27px;
+                color: #0fe;
+
             }
 
-            .task {
-                margin-top: 1rem;
-            }
+            .task h1 {
+                padding: 12px;
+                font-size: 15px;
+                color: white;
+                background-color: rgba(255, 255, 255, 0.256);
+                backdrop-filter: blur(10px);
+                border: 2px solid white;
+                border-radius: 70px;
 
-            .servicename {
-                margin-top: -18px;
             }
-
 
             .services {
+
                 display: flex;
                 flex-direction: column;
                 height: 120vh;
                 gap: 21px 30px;
                 justify-content: center;
-                align-content: center;
-                margin-left: 4rem;
-                margin-top: 4rem;
+                align-items: center;
+                margin-top: 12rem;
 
             }
 
             .services .box {
-                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                backdrop-filter: blur(10px);
+                background-color: rgba(35, 28, 107, 0.296);
+                border-radius: 20px;
+                height: 18rem;
                 width: 25rem;
-                margin-left: 2rem;
+
             }
 
-            @keyframes services1 {
-                from {
-                    transform: translateX(-710px);
-                }
 
-                to {
-                    transform: translateX(90px);
-                }
+        }
+
+        @media(max-width:470px) {
+
+            .services .box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                backdrop-filter: blur(10px);
+                background-color: rgba(35, 28, 107, 0.296);
+                border-radius: 20px;
+                height: 14rem;
+                width: 20rem;
+
             }
 
-            @keyframes services2 {
-                from {
-                    transform: translateX(710px);
-                }
-
-                to {
-                    transform: translateX(90px);
-                }
-            }
-
-            .home .left {
-                height: 250px;
-                width: 250px;
-
+            .servicename {
+                font-size: 60px;
             }
 
             form {
-                width: 33vw;
-                height: 60vh;
-            }
-
-
-            @media(max-width:610px) {
-                .services {
-                    margin-left: 1rem;
-                    margin-top: 4rem;
-                }
-
-                .task {
-                    margin-top: rem;
-
-                }
-
-                .services {
-
-                    margin-left: 1rem;
-                }
-            }
-
-            @keyframes services1 {
-                from {
-                    transform: translateX(-710px);
-                }
-
-                to {
-                    transform: translateX(40px);
-                }
-            }
-
-            @keyframes services2 {
-                from {
-                    transform: translateX(710px);
-                }
-
-                to {
-                    transform: translateX(45px);
-                }
-            }
-
-
-            @media(max-width:520px) {
-                @keyframes services1 {
-                    from {
-                        transform: translateX(-710px);
-                    }
-
-                    to {
-                        transform: translateX(20px);
-                    }
-                }
-
-                @keyframes services2 {
-                    from {
-                        transform: translateX(710px);
-                    }
-
-                    to {
-                        transform: translateX(10px);
-                    }
-                }
-
+                width: 39vw;
+                height: 77vh;
             }
         }
+    
     </style>
 </head>
 
@@ -656,13 +626,15 @@
         </div>
     </div>
 
-    <h1 class="tools">TOOLS</h1>
+    <div class="section2">
+        <h1 class="tools">TOOLS</h1>
 
-    <div class="task">
-        <h1>HTML</h1>
-        <h1>REACT.JS</h1>
-        <h1>NODE.JS</h1>
-        <h1>MongoDB</h1>
+        <div class="task">
+            <h1>HTML</h1>
+            <h1>REACT.JS</h1>
+            <h1>NODE.JS</h1>
+            <h1>MongoDB</h1>
+        </div>
     </div>
 
 
@@ -734,6 +706,7 @@
             </form>
         </div>
     </div>
+
     <script src="script.js"></script>
 
 
