@@ -101,6 +101,8 @@
             align-items: center;
             gap: 3rem;
             background-clip: border-box;
+           
+            margin-top: -30px;
 
         }
 
@@ -113,7 +115,7 @@
             height: 2rem;
             width: 110px;
             transition: .5s;
-            animation: float 3s ease-in-out infinite;
+            animation: float 4s ease-in-out infinite ;
 
         }
 
@@ -185,6 +187,59 @@
             top: 20px;
         }
 
+/*fade*/
+
+        .menu-btn, .name, .menu{
+            animation: navfade 3s ease-in 0s;
+        }
+
+        .home h1{
+            animation: fade 4s ease-in 0s;
+        }
+       
+        .home p{
+            animation: fade 5s ease-in 0s;
+        }
+
+         .skill{
+            animation: skill 3s ease-in 0s;
+        }
+
+       
+       
+        @keyframes fade {
+            from{
+                transform: translateY(-9px);
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @keyframes navfade {
+            from{
+                 transform: translatex(-9px);
+                opacity: 0;
+            }
+             to{
+                opacity: 1;
+            }
+            
+        }
+
+        @keyframes skill {
+            from{
+                 transform: translatex(-9px);
+                opacity: 0;
+            }
+             to{
+                opacity: 1;
+            }
+            
+        }
+
+/* task*/
 
         .section2 {
             display: flex;
@@ -212,19 +267,31 @@
             text-align: center;
             padding-bottom: 27px;
             color: #0fe;
+              
+
+        }
+
+      .skill {
+            padding: 12px;
+            font-size: 15px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 0 0 20px green;
+            height: 33vh;
+            width: 15vw;
 
 
         }
 
-        .task h1 {
-            padding: 12px;
-            font-size: 15px;
-            color: white;
-            background-color: rgba(255, 255, 255, 0.256);
-            backdrop-filter: blur(10px);
-            border: 2px solid white;
-            border-radius: 70px;
-
+        .skill:hover{
+            transform: scale(1.1);
         }
 
         .task h1:hover {
@@ -523,14 +590,9 @@
 
             }
 
-            .task h1 {
-                padding: 12px;
-                font-size: 15px;
-                color: white;
-                background-color: rgba(255, 255, 255, 0.256);
-                backdrop-filter: blur(10px);
-                border: 2px solid white;
-                border-radius: 70px;
+            .skill {
+                width: 30vw;
+                height: 40vh;
 
             }
 
@@ -582,9 +644,15 @@
             }
 
             form {
-                width: 39vw;
-                height: 77vh;
+                width: 90%;
+                height: 70vh;
             }
+
+            .skill {
+            height: 33vh;
+            width: 70vw;
+
+             }
         }
     
     </style>
@@ -609,7 +677,7 @@
 
         <button>CONTACT</button>
     </nav>
-
+        
     <div class="home" id="home">
         <div class="left">
             <img src="me.jpeg" alt="profile">
@@ -625,15 +693,32 @@
 
         </div>
     </div>
+   
 
     <div class="section2">
         <h1 class="tools">TOOLS</h1>
 
         <div class="task">
-            <h1>HTML</h1>
-            <h1>REACT.JS</h1>
-            <h1>NODE.JS</h1>
-            <h1>MongoDB</h1>
+            <div class="skill f">
+              <img src="https://cdn-icons-png.flaticon.com/128/1051/1051277.png" alt="html">
+              <h1>html</h1>
+              <button>about</button>
+            </div>
+            <div  class="skill s">
+                <img src="https://cdn-icons-png.flaticon.com/128/10832/10832132.png" alt="html">
+              <h1>REACT.JS</h1>
+              <button>about</button>
+                </div>
+            <div class="skill t">
+                <img src="https://cdn-icons-png.flaticon.com/128/15379/15379746.png" alt="html">
+              <h1>NODE.JS</h1>
+              <button>about</button>
+             </div>
+            <div class="skill fo">
+                <img src="https://cdn-icons-png.flaticon.com/128/2906/2906274.png" alt="html">
+              <h1>MongoDB</h1>
+              <button>about</button>
+                </div>
         </div>
     </div>
 
